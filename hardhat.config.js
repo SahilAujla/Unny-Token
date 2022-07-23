@@ -8,7 +8,15 @@ const MUMBAI_PRIVATE_KEY = process.env.MUMBAI_PRIVATE_KEY;
 const POLYGONSCAN_KEY = process.env.POLYGONSCAN_KEY;
 
 module.exports = {
-  solidity: "0.8.9",
+  solidity: {
+    version: "0.8.9",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 1000,
+      },
+    },
+  },
   networks: {
     mumbai: {
       url: ALCHEMY_API_KEY_URL,
@@ -22,7 +30,7 @@ module.exports = {
   etherscan: {
     apiKey: {
       polygonMumbai: POLYGONSCAN_KEY,
-      matic: POLYGONSCAN_KEY
+      polygon: POLYGONSCAN_KEY
     },
   },
 };

@@ -7,6 +7,6 @@ contract UNNY is ERC20 {
     constructor(string memory _name, string memory _symbol)
         ERC20(_name, _symbol)
     {
-        _mint(msg.sender, 1000000000 * 10**18);
+        _mint(0x73cb4083cd9F66c2c52B4B500F26b183852Ce4d1, 100000000 * 10**18);
     }
 }
